@@ -8,6 +8,7 @@ RUN rpm --import http://repos.azulsystems.com/RPM-GPG-KEY-azulsystems ;\
     cd /tmp ;\
     curl -sLO https://cdn.azul.com/zulu/bin/zulu-repo-${ZULU_REPO_VER}.noarch.rpm ;\
     dnf install -y zulu-repo-${ZULU_REPO_VER}.noarch.rpm 'dnf-command(versionlock)' tzdata langpacks-en glibc-langpack-en;\
-    rm ./zulu-repo-${ZULU_REPO_VER}.noarch.rpm
+    rm ./zulu-repo-${ZULU_REPO_VER}.noarch.rpm ;\
+    dnf clean all 
 
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'

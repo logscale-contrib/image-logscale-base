@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi9:9.1.0-1646.1669627755
+FROM registry.access.redhat.com/ubi9:9.3-1476
 
 #
 # UTF-8 by default
